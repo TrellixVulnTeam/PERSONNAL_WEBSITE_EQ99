@@ -1,0 +1,18 @@
+<!-- Template de page -->
+<div class="app-component-div">
+    <app-header></app-header>
+  </div>
+
+<div class="app-component-div">
+  <app-animation></app-animation>
+</div>
+
+<div [@triggerName]="prepareRoute(outlet)">
+  <router-outlet #outlet="outlet"></router-outlet>
+</div>
+   
+
+  <div class="app-component-div">
+    <app-footer></app-footer>
+  </div>
+

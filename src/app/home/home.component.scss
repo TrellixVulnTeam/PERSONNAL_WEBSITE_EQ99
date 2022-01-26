@@ -1,0 +1,256 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  text-align: justify;
+  background-color: #424242;
+  margin-bottom: 60px;
+}
+
+@media (max-width: 700px) {
+  .container {
+    flex-direction: column;
+    text-align: justify;
+  }
+}
+
+.containerimg {
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 50%;
+}
+
+@media (max-width: 700px) {
+  .containerimg {
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10px;
+    margin-bottom: 70px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 90%;
+  }
+}
+
+.containerdescr {
+  width: 45%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  background-color: #424242;
+}
+@media (max-width: 700px) {
+  .containerdescr {
+    width: 90%;
+  }
+}
+
+#img1 {
+  background-image: url("../../assets/img/img1.jpg");
+  background-repeat: no-repeat;
+  background-position: 50%, 50%;
+  background-size: auto, 100%;
+  margin: 10px;
+  border: solid 2px orange;
+}
+
+#img1:hover {
+  transition: 0.4s;
+  background-image: url("../../assets/img/img1.png");
+}
+
+@media (max-width: 700px) {
+  #img1 {
+    width: 33.33%;
+    margin-right: auto;
+    margin-left: auto;
+    object-fit: contain;
+  }
+  #img1:hover {
+    background-image: url("../../assets/img/img1.jpg");
+  }
+}
+
+#img2 {
+  background-image: url("../../assets/img/img2.jpg");
+  background-repeat: no-repeat;
+  background-position: 50%, 50%;
+  background-size: auto, 100%;
+  margin: 10px;
+  border: solid 2px orange;
+}
+
+#img2:hover {
+  transition: 0.4s;
+  background-image: url("../../assets/img/img2.png");
+}
+
+@media (max-width: 700px) {
+  #img2 {
+    width: 33.33%;
+    margin-right: auto;
+    margin-left: auto;
+    object-fit: contain;
+  }
+  #img2:hover {
+    background-image: url("../../assets/img/img2.jpg");
+  }
+}
+
+#img3 {
+  background-image: url("../../assets/img/img3.jpg");
+  background-repeat: no-repeat;
+  background-position: 50%, 50%;
+  background-size: auto, 100%;
+  margin: 10px;
+  border: solid 2px orange;
+}
+#img3:hover {
+  transition: 0.4s;
+  background-image: url("../../assets/img/img3.png");
+}
+
+@media (max-width: 700px) {
+  #img3 {
+    width: 33.33%;
+    margin-right: auto;
+    margin-left: auto;
+    object-fit: contain;
+  }
+  #img3:hover {
+    background-image: url("../../assets/img/img3.jpg");
+  }
+}
+
+.item {
+  background-color: #424242;
+  height: 500px;
+  width: 300px;
+  min-width: 33.3333% auto;
+  transition: 0.4s;
+  z-index: 0;
+}
+
+@media (max-width: 700px) {
+  .item {
+    height: 250px;
+    width: 33.33%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.item:hover {
+  width: 400%;
+  transition: 0.4s;
+}
+
+.descr {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+}
+
+.photo {
+  width: 100%;
+  margin: 10px;
+  object-fit: cover;
+  max-height: 300px;
+  border: solid 4px orange;
+}
+
+.photo:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 25px orange;
+}
+
+.divphoto {
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+.txt {
+  height: 50%;
+  color: white;
+  overflow: hidden;
+}
+
+.titre1 {
+  position: absolute;
+  writing-mode: vertical-lr;
+  color: white;
+  z-index: 10;
+  font-size: 30pt;
+  display: block;
+  overflow: hidden;
+  margin-top: 20px;
+  -webkit-text-stroke: 2px black;
+  font-weight: bold;
+  font-size: 30pt;
+}
+
+.item:hover .titre1 {
+  opacity: 0.33;
+}
+
+@media (max-width: 700px) {
+  .titre1 {
+    font-size: 12pt;
+  }
+}
+
+.txt1 {
+  writing-mode: horizontal-tb;
+  padding-left: 10px;
+  z-index: 15;
+  font-size: 15pt;
+  display: none;
+  color: white;
+  font-weight: bold;
+}
+
+.item:hover .txt1 {
+  margin-top: 20px;
+  display: block;
+  text-align: left;
+  margin-left: 65px;
+  margin-right: 10px;
+  text-align: left;
+}
+
+@media (max-width: 700px) {
+  .item .txt1 {
+    display: none;
+  }
+  .item:hover .txt1 {
+    display: none;
+  }
+  .item .titre1 {
+    display: none;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 1000px) {
+  .titre1 {
+    font-size: 20pt;
+  }
+  .containerimg:hover .titre1 {
+    display: none;
+  }
+  .item:hover .titre1 {
+    display: none;
+  }
+
+  .txt1 {
+    font-size: 10pt;
+  }
+}

@@ -1,0 +1,35 @@
+.column {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  justify-content: space-between;
+}
+
+.cell {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+}
+
+.table {
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+}
+@media (max-width: 500px) {
+  .column {
+    flex-direction: column;
+  }
+}
+
+h2 {
+  color: white;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.bouton {
+  text-decoration: none;
+  color: orange;
+}

@@ -1,0 +1,10 @@
+{
+    "/#/contact": {
+      "target": "https://mailthis.to/webmaster.adisperati@outlook.fr",
+      "secure": true,
+      "changeOrigin": true,
+      "pathRewrite": {
+        "^/#/contact": ""
+      }
+    }
+  }

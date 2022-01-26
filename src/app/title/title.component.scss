@@ -1,0 +1,70 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+    html {
+      height:90%;
+  }
+
+  body {
+     background:#424242;
+     display:flex;
+     align-items:center;
+     height:90%;
+  }
+  .back {
+    margin:1em auto;
+    font-family:"Roboto";
+  }
+  .back span {
+    font-size:3em;
+    color:orange;
+    background:#424242;
+    display:table-cell;
+    padding: 0 10px;
+    line-height: 100px;
+    
+  }
+
+  .back:hover span {
+    animation:jumb 2s;
+  }
+  @keyframes jumb {
+    0% {
+      transform:translateY(0px)
+    }
+    50% {
+      transform:translateY(-30px);
+      box-shadow:0 15px 0 orange;
+    }
+    100% {
+      transform:translateY(0px) 
+    }
+  }
+  .back span:nth-child(1) {
+    animation-delay:0s;
+  }
+  .back span:nth-child(2) {
+    animation-delay:.1s;  
+  }
+  .back span:nth-child(3) {
+    animation-delay:.2s;
+  }
+  .back span:nth-child(4) {
+    animation-delay:.3s;  
+  }
+  .back span:nth-child(5) {
+    animation-delay:.4s;
+  }
+  .back span:nth-child(6) {
+    animation-delay:.5s;  
+  }
+  .back span:nth-child(7) {
+    animation-delay:.6s;
+  }
+  @media (max-width: 700px) {
+    .back {
+        font-size:7px;
+    }
+  }
+
+  h1 {
+    display: none;
+  }

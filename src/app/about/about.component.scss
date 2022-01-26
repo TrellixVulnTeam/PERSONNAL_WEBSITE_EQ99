@@ -1,0 +1,19 @@
+.titreabout {
+  text-align: center;
+  font-family: proxima-nova, monospace;
+  color: white;
+}
+
+.descrabout {
+  font-family: proxima-nova, monospace;
+  color: white;
+  text-align: justify;
+  max-width: 70%;
+  margin: auto;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

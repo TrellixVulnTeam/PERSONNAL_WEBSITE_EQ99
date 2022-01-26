@@ -1,0 +1,7 @@
+<!-- Contenu Page GALERIE -->
+<!-- affiche les images de mon compte unsplash -->
+<div class="container" *ngIf="Items">
+  <div class="photo" *ngFor="let item of Items">
+    <img src="{{ item.urls.small }}" alt="broken" />
+  </div>
+</div>

@@ -1,0 +1,44 @@
+.header {
+  width: 100%;
+  padding: 0px;
+  background-color: #424242;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
+  border-bottom: solid 4px;
+  border-color: orange;
+}
+
+.headeritem {
+  display: flex;
+}
+
+.bouton {
+  font-size: 25px;
+  color: black;
+  display: block;
+  transition: 0.4s;
+  width: 8%;
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.bouton:hover {
+  color: white;
+  transition: 0.4s;
+}
+
+.bouton-burger {
+  transition: 0.4s;
+  color: black;
+  padding-right: 2%;
+  vertical-align: center;
+}
+
+.bouton-burger:hover {
+  color: white;
+  transition: 0.4s;
+}
