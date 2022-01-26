@@ -6,6 +6,7 @@ import { ContactComponent } from '../app/contact/contact.component';
 import { GalerieComponent } from './galerie/galerie.component';
 import { AboutComponent } from './about/about.component';
 
+//Routing / Navigation
 const routes: Routes = [
   {
     path: '',
@@ -15,7 +16,9 @@ const routes: Routes = [
         component: HomeComponent,
         data: { animationState: 'Home' },
       },
-      { path: 'cv', component: CvComponent, data: { animationState: 'Cv' } },
+      { path: 'cv', component: CvComponent,
+        data: { animationState: 'Cv' }
+      },
       {
         path: 'contact',
         component: ContactComponent,

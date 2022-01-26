@@ -35,10 +35,17 @@
   transition: 0.4s;
   color: black;
   padding-right: 2%;
-  vertical-align: center;
+}
+
+@media (max-width: 700px){
+  .bouton-burger{
+    padding-top: 25px;
+}
 }
 
 .bouton-burger:hover {
   color: white;
   transition: 0.4s;
 }
+
+

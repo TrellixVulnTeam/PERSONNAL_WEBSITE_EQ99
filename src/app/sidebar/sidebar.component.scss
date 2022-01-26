@@ -1,74 +1,61 @@
- /* The side navigation menu */
- .sidenav {
-    height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
-    right: 0;
-    background-color: #383b40; /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-  }
-  
-  /* The navigation menu links */
-  .sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-  }
-  
-  /* When you mouse over the navigation links, change their color */
-  .sidenav a:hover {
-    color: white;
-  }
-  
-  /* Position and style the close button (top right corner) */
-  .sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-  }
-  
-  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-  #main {
-    transition: margin-left .5s;
-    padding: 20px;
-  }
-  
-  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-  @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-  } 
+//Sidebar
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #383b40;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+}
 
-  .burger {
-    font-size:60px;
-    cursor:pointer;
-    vertical-align: center;
+//croix pour fermer
+.closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  color: #818181;
+  text-decoration: none;
+}
+
+//Change la couleur de la croix en survol
+.closebtn:hover {
+  color: white;
+  transition: 0.4s;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 500px) {
+  .sidenav {
+    padding-top: 15px;
   }
+}
 
-  @media (max-width: 700px) {
-    .burger {
-      font-size: 30px;
-        }
-  }
+.burger {
+  font-size: 60px;
+  cursor: pointer;
+}
 
-  //Bouton cool hover
+@media (max-width: 700px) {
+  .burger{
+    font-size: 30px;
+    }
+}
 
-  .menu-bouton {
-    width: 200px;
-    text-align: left;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 5px;
-    margin-bottom: 5px;
+//ANIMATION BOUTON
+
+.menu-bouton {
+  width: 200px;
+  text-align: left;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 @media (max-width: 500px) {
@@ -78,15 +65,14 @@
   }
 }
 
-$thick : 3px;
-$pad : 0.7em;
-$extra : calc(#{$pad} * 1.2);
-$color : orange;
-
+$thick: 3px;
+$pad: 0.7em;
+$extra: calc(#{$pad} * 1.2);
+$color: orange;
 
 .portfolio-experiment {
   background: #383b40;
-  
+
   a {
     color: white;
     padding: $pad $extra;
@@ -98,30 +84,26 @@ $color : orange;
     letter-spacing: 0.07em;
 
     .text {
-      // padding: 0 0.3em;
       font-family: proxima-nova, monospace;
-      transform: translate3d(0,$pad,0);
+      transform: translate3d(0, $pad, 0);
       display: block;
-      transition: transform 0.4s cubic-bezier(.2,0,0,1) 0.4s;
+      transition: transform 0.4s cubic-bezier(0.2, 0, 0, 1) 0.4s;
       font-weight: bold;
     }
 
     &:after {
       position: absolute;
-      content: '';
+      content: "";
       bottom: -$thick;
       left: $extra;
       right: $extra;
       height: $thick;
       background: $color;
-      // z-index: -1;
-      transition: 
-        transform 0.8s cubic-bezier(1,0,.37,1) 0.2s,
-        right 0.2s cubic-bezier(.04,.48,0,1) 0.6s,
-        left 0.4s cubic-bezier(.04,.48,0,1) 0.6s;
+      transition: transform 0.8s cubic-bezier(1, 0, 0.37, 1) 0.2s,
+        right 0.2s cubic-bezier(0.04, 0.48, 0, 1) 0.6s,
+        left 0.4s cubic-bezier(0.04, 0.48, 0, 1) 0.6s;
       transform-origin: left;
     }
-
   }
 
   .line {
@@ -133,20 +115,20 @@ $color : orange;
       width: $thick;
       bottom: -$thick;
       top: -$thick;
-      transform: scale3d(1,0,1);
-    }  
+      transform: scale3d(1, 0, 1);
+    }
 
     &.-top,
     &.-bottom {
       height: $thick;
       left: -$thick;
       right: -$thick;
-      transform: scale3d(0,1,1);
+      transform: scale3d(0, 1, 1);
     }
 
     &.-right {
       right: -$thick;
-      transition: transform 0.1s cubic-bezier(1,0,.65,1.01) 0.23s;
+      transition: transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.23s;
       transform-origin: top;
     }
 
@@ -164,35 +146,32 @@ $color : orange;
 
     &.-bottom {
       bottom: -$thick;
-      transition: transform 0.3s cubic-bezier(1,0,.65,1.01);
+      transition: transform 0.3s cubic-bezier(1, 0, 0.65, 1.01);
       transform-origin: right;
-    }  
+    }
   }
 
   a:hover,
   a:active {
-
     .text {
-      transform: translate3d(0,0,0);
-      transition: transform 0.6s cubic-bezier(.2,0,0,1) 0.4s;
+      transform: translate3d(0, 0, 0);
+      transition: transform 0.6s cubic-bezier(0.2, 0, 0, 1) 0.4s;
     }
 
     &:after {
-      transform: scale3d(0,1,1);
+      transform: scale3d(0, 1, 1);
       right: -$thick;
       left: -$thick;
       transform-origin: right;
-      transition: 
-        transform 0.2s cubic-bezier(1,0,.65,1.01) 0.17s,
-        right 0.2s cubic-bezier(1,0,.65,1.01),
-        left 0s 0.3s;
+      transition: transform 0.2s cubic-bezier(1, 0, 0.65, 1.01) 0.17s,
+        right 0.2s cubic-bezier(1, 0, 0.65, 1.01), left 0s 0.3s;
     }
 
     .line {
-      transform: scale3d(1,1,1);
+      transform: scale3d(1, 1, 1);
 
       &.-right {
-        transition: transform 0.1s cubic-bezier(1,0,.65,1.01) 0.2s;
+        transition: transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.2s;
         transform-origin: bottom;
       }
 
@@ -207,10 +186,10 @@ $color : orange;
       }
 
       &.-bottom {
-        transition: transform 0.5s cubic-bezier(0,.53,.29,1) 0.56s;
+        transition: transform 0.5s cubic-bezier(0, 0.53, 0.29, 1) 0.56s;
         transform-origin: left;
       }
     }
-
   }
 }
+//FIN ANIMATION BOUTON
