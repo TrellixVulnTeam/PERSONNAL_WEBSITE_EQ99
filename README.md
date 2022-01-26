@@ -22,7 +22,7 @@ Then if needed install angularCLI
 npm install - g @angular/cli
 ```
 
-Once you have set up your environment, clone repository.
+Once you have set up your environment, clone the repository.
 
 Finally, run a local instance of the application in the folder:
 
