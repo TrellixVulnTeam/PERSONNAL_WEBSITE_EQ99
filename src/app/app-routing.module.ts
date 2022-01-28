@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { CvComponent } from '../app/components/cv/cv.component';
-import { ContactComponent } from '../app/components/contact/contact.component';
+import { ContactComponent } from './components/contact/contact.component';
 import { GalerieComponent } from './components/galerie/galerie.component';
 import { AboutComponent } from './components/about/about.component';
 import { GameComponent } from './components/game/game.component';
@@ -17,7 +17,8 @@ const routes: Routes = [
         component: HomeComponent,
         data: { animationState: 'Home' },
       },
-      { path: 'cv', component: CvComponent,
+      { path: 'cv', 
+        component: CvComponent,
         data: { animationState: 'Cv' }
       },
       {

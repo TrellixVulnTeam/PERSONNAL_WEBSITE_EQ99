@@ -1,22 +1,36 @@
-  .wrapper {
-    width: 600px;
-    height: 360px;
-    margin: auto;
-    position: relative;
-    top: 5px;
-    left: 5px;
-  }
+.instructions{
+  position: absolute;
+  margin: 0px;
+  top: 0px;
+  width: 154px;
+  padding: 5px;
+  color: white;
+  background: #000;
+  font-weight: bold;
+  text-align: justify;
+}
+
+.loader{
+ width: 100%;
+ height: 100%;
+ background: #000000ab;
+ position: absolute;
+ text-align: center;
+ color: #fff;
+}
+
+.message {
+  text-align: center;
+  margin-top: 20%;
+}
+
+.loader i {
+  font-size: 50px;
+}
   
-  canvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-    border: 1px solid black;
-    z-index: 1;
-    width: 600px;
-    height: 360px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-  
+
+.play-ground{
+  display: grid;
+  margin: auto;
+  background-color: #ddd;
+}
