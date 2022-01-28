@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ApigalerieService } from '../apigalerie.service';
+import { ApigalerieService } from '../../services/apigalerie.service';
 
 @Component({
   selector: 'app-galerie',

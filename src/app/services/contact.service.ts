@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { ContactModel } from './contact-model';
+import { ContactModel } from '../models/contact-model';
 import { map } from 'rxjs/operators'
 import { HttpHeaders } from '@angular/common/http';
 

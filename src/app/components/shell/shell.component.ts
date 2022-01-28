@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { routeTransitionAnimations } from '../route-transition-animations';
+import { routeTransitionAnimations } from '../../route-transition-animations';
 
 @Component({
   selector: 'app-shell',

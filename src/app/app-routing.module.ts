@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { CvComponent } from '../app/cv/cv.component';
-import { ContactComponent } from '../app/contact/contact.component';
-import { GalerieComponent } from './galerie/galerie.component';
-import { AboutComponent } from './about/about.component';
-import { GameComponent } from './game/game.component';
+import { HomeComponent } from './components/home/home.component';
+import { CvComponent } from '../app/components/cv/cv.component';
+import { ContactComponent } from '../app/components/contact/contact.component';
+import { GalerieComponent } from './components/galerie/galerie.component';
+import { AboutComponent } from './components/about/about.component';
+import { GameComponent } from './components/game/game.component';
 
 //Routing / Navigation
 const routes: Routes = [
