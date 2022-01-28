@@ -20,22 +20,22 @@ export class AppService {
 	}
 
 	movePlayer(event: KeyboardEvent, type: string): void {
-		if (type === 'keydown') {
-			if (event.keyCode === 37) {
+		if (type == 'keydown') {
+			if (event.key === "Left") {
 				this.gameService.moveLeft = true;
 				this.gameService.moveUP = false;
 				this.gameService.moveDown = false;
-			} else if (event.keyCode === 39) {
+			} else if (event.key === "Right") {
 				this.gameService.moveRight = true;
 				this.gameService.moveLeft = false;
 				this.gameService.moveUP = false;
 				this.gameService.moveDown = false;
-			} else if (event.keyCode === 38) {
+			} else if (event.key === "Up") {
 				this.gameService.moveUP = true;
 				this.gameService.moveLeft = false;
 				this.gameService.moveRight = false;
 				this.gameService.moveDown = false;
-			} else if (event.keyCode === 40) {
+			} else if (event.key === "Down") {
 				this.gameService.moveDown = true;
 				this.gameService.moveLeft = false;
 				this.gameService.moveRight = false;

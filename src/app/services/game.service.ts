@@ -70,11 +70,11 @@ animationFrame(n: number): boolean {
   getSingleObstacle(): void {
   const context: CanvasRenderingContext2D = this.context;
   const image: HTMLImageElement = this.image;
-  const randomVehicle: SingleObstacles = CONFIG.vehicles[Math.floor(Math.random() * CONFIG.vehicles.length)];
+  const randomVehicle: SingleObstacles = CONFIG.airplanesRight[Math.floor(Math.random() * CONFIG.airplanesRight.length)];
   
   this.obstacles.push(new function () {
-  this.x = Math.floor(Math.random() * 450) + 0,
-  this.y = Math.floor(Math.random() * -15) + 0,
+  this.y = Math.floor(Math.random() * 450) + 0,
+  this.x = Math.floor(window.innerWidth),
   this.width = randomVehicle.width;
   this.height = randomVehicle.height;
   this.update = () => {
@@ -91,10 +91,10 @@ animationFrame(n: number): boolean {
   
   moveObstacles(): void {
   this.obstacles.forEach((element: Obstacles, index: number) => {
-  element.y += 3;
+  element.x -= 3;
   element.update();
   this.detectCrash(element);
-  if (element.y > this.height) {
+  if (element.x > this.width) {
   this.obstacles.splice(index, 1);
   }
   });

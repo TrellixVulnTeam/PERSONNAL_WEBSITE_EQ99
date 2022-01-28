@@ -30,6 +30,8 @@ import { LazyLoadImageModule } from 'ng-lazyload-image';
 import { AboutComponent } from './components/about/about.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { GameComponent } from './components/game/game.component';
+import { AppService } from './services/app.service';
+import { GameService } from './services/game.service';
 
 @NgModule({
   declarations: [
@@ -65,7 +67,9 @@ import { GameComponent } from './components/game/game.component';
   providers: [
     ContactService,
     {provide: LocationStrategy, useClass: HashLocationStrategy},
-    ApigalerieService
+    ApigalerieService,
+    AppService,
+    GameService
 
   ],
   bootstrap: [AppComponent]
