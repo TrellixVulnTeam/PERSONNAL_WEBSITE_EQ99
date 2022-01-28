@@ -2,6 +2,7 @@ import { Injectable, EventEmitter } from '@angular/core';
 import { GameService } from './game.service';
 
 @Injectable()
+
 export class AppService {
 
 	isImageLoaded: EventEmitter<number> = new EventEmitter();
@@ -18,24 +19,23 @@ export class AppService {
 	getImageLoadEmitter() {
 		return this.isImageLoaded;
 	}
-
 	movePlayer(event: KeyboardEvent, type: string): void {
-		if (type == 'keydown') {
-			if (event.key === "Left") {
+		if (type === 'keydown') {
+			if (event.keyCode === 37) {
 				this.gameService.moveLeft = true;
 				this.gameService.moveUP = false;
 				this.gameService.moveDown = false;
-			} else if (event.key === "Right") {
+			} else if (event.keyCode === 39) {
 				this.gameService.moveRight = true;
 				this.gameService.moveLeft = false;
 				this.gameService.moveUP = false;
 				this.gameService.moveDown = false;
-			} else if (event.key === "Up") {
+			} else if (event.keyCode === 38) {
 				this.gameService.moveUP = true;
 				this.gameService.moveLeft = false;
 				this.gameService.moveRight = false;
 				this.gameService.moveDown = false;
-			} else if (event.key === "Down") {
+			} else if (event.keyCode === 40) {
 				this.gameService.moveDown = true;
 				this.gameService.moveLeft = false;
 				this.gameService.moveRight = false;
