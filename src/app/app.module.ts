@@ -29,6 +29,7 @@ import { LazyLoadImageModule } from 'ng-lazyload-image';
 // import { IntersectionObserverHooks  } from 'ng-lazyload-image';
 import { AboutComponent } from './about/about.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { GameComponent } from './game/game.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ShellComponent,
     ContactComponent,
     GalerieComponent,
-    AboutComponent
+    AboutComponent,
+    GameComponent
   ],
   imports: [
     BrowserModule,

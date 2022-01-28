@@ -5,6 +5,7 @@ import { CvComponent } from '../app/cv/cv.component';
 import { ContactComponent } from '../app/contact/contact.component';
 import { GalerieComponent } from './galerie/galerie.component';
 import { AboutComponent } from './about/about.component';
+import { GameComponent } from './game/game.component';
 
 //Routing / Navigation
 const routes: Routes = [
@@ -33,6 +34,11 @@ const routes: Routes = [
         path: 'about',
         component: AboutComponent,
         data: { animationState: 'About' },
+      },
+      {
+        path: 'game',
+        component: GameComponent,
+        data: { animationState: 'Game' },
       },
       {
         path: '**',
