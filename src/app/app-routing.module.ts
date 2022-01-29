@@ -6,6 +6,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { GalerieComponent } from './components/galerie/galerie.component';
 import { AboutComponent } from './components/about/about.component';
 import { GameComponent } from './components/game/game.component';
+import { MusicComponent } from './components/music/music.component';
 
 //Routing / Navigation
 const routes: Routes = [
@@ -40,6 +41,11 @@ const routes: Routes = [
         path: 'game',
         component: GameComponent,
         data: { animationState: 'Game' },
+      },
+      {
+        path: 'music',
+        component: MusicComponent,
+        data: { animationState: 'Music' },
       },
       {
         path: '**',

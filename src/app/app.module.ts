@@ -32,6 +32,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { GameComponent } from './components/game/game.component';
 import { AppService } from './services/app.service';
 import { GameService } from './services/game.service';
+import { MusicComponent } from './components/music/music.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { GameService } from './services/game.service';
     ContactComponent,
     GalerieComponent,
     AboutComponent,
-    GameComponent
+    GameComponent,
+    MusicComponent
   ],
   imports: [
     BrowserModule,
