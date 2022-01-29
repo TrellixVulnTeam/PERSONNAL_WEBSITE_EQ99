@@ -27,6 +27,7 @@
 @media (max-width: 700px){
     .article{
         flex-direction: column;
+        justify-content: center;
     }
 }
 
@@ -46,16 +47,26 @@
     text-align: left;
     width: 50%;
     overflow: hidden;
+    
 }
 
 @media (max-width: 700px){
     .image{
         width: 100%;
+        text-align: center;
     }
 }
 
 img{
 border: solid 2px black;
-margin: 5px;
+    margin: 5px;
 }
+
+
+@media (max-width: 700px){
+    img{
+        border: none;
+    }
+}
+
 
