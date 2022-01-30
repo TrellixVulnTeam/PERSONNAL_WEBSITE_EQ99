@@ -1,5 +1,5 @@
 const db = require("../models");
-const Player = db.players;
+const Player = db.player;
 
 //create player + score
 exports.create = (req, res) => {

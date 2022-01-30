@@ -4,7 +4,7 @@ module.exports = (mongoose) => {
     mongoose.Schema(
       {
         nickname: String,
-        score: String,
+        score: Number
       },
       { timestamps: true }
     )

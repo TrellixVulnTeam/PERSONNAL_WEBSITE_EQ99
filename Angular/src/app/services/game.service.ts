@@ -7,12 +7,19 @@ import { PlayerPosition } from '../interfaces/player-position';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Player } from '../models/player-model';
+import { GameComponent } from '../components/game/game.component';
 
 const baseUrl = 'http://localhost:8080/game'
-let data: String
 
 @Injectable()
 export class GameService {
+
+  nickname = "";
+	score = setInterval(() => {
+		this.score = this.score +1;
+		return this.score},
+		200
+		);
   constructor(private http: HttpClient) { }
 
   @Input() public width: number = CONFIG.playGroundWidth;
@@ -190,7 +197,8 @@ export class GameService {
       carBottom > componentTop
     ) {
       clearInterval(this.gameLoop);
-      alert('Game Over');
+      this.create(this.nickname);
+      alert('Game Over '+this.nickname+' your score is '+this.score);
       window.location.reload();
     }
   }
@@ -214,5 +222,9 @@ export class GameService {
 
   create(data: any): Observable<any> {
     return this.http.post(baseUrl, data);
+  }
+
+  addPlayer(): void {
+    this.nickname = prompt("Choose your nickname");
   }
 }

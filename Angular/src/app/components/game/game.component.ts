@@ -8,8 +8,6 @@ import {
 import { AppService } from '../../services/app.service';
 import { GameService } from '../../services/game.service';
 
-let playername: String
-
 @Component({
 	selector: 'app-game',
 	templateUrl: './game.component.html',
@@ -20,6 +18,7 @@ export class GameComponent implements AfterViewInit {
 	@ViewChild('canvas') public canvas: ElementRef;
 	subscription: any;
 	showLoader = true;
+	score = this.gameService.score;
 
 	constructor(
 		private appService: AppService,
@@ -28,11 +27,11 @@ export class GameComponent implements AfterViewInit {
 
 	public ngAfterViewInit() {
 		const canvasEl: HTMLCanvasElement = this.canvas.nativeElement;
+		this.gameService.addPlayer();
 		this.appService.createPlayGround(canvasEl);
 		this.subscription = this.appService.getImageLoadEmitter()
 			.subscribe((item) => {
 				this.showLoader = false;
-				this.gameService.create(playername)
 				this.gameService.startGameLoop();
 			});
 	}
@@ -44,4 +43,5 @@ export class GameComponent implements AfterViewInit {
 	@HostListener('document:keyup', ['$event']) onKeyupHandler(event: KeyboardEvent) {
 		this.appService.movePlayer(event, 'keyup');
 	}
+
 }
