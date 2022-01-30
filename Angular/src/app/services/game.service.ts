@@ -4,9 +4,17 @@ import * as CONFIG from './../config/config';
 import { Obstacles } from './../interfaces/obstacles';
 import { SingleObstacles } from './../interfaces/single-obstacle';
 import { PlayerPosition } from '../interfaces/player-position';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { Player } from '../models/player-model';
+
+const baseUrl = 'http://localhost:8080/game'
+let data: String
 
 @Injectable()
 export class GameService {
+  constructor(private http: HttpClient) { }
+
   @Input() public width: number = CONFIG.playGroundWidth;
   @Input() public height: number = CONFIG.playGroundHeight;
   frameNumber: number = CONFIG.frameNumber;
@@ -194,5 +202,17 @@ export class GameService {
       CONFIG.playGroundWidth,
       CONFIG.playGroundHeight
     );
+  }
+
+  getAll(): Observable<Player[]> {
+    return this.http.get<Player[]>(baseUrl);
+  }
+
+  get(id: any): Observable<any> {
+    return this.http.get(`${baseUrl}/${id}`);
+  }
+
+  create(data: any): Observable<any> {
+    return this.http.post(baseUrl, data);
   }
 }

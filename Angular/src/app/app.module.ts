@@ -72,7 +72,6 @@ import { MusicComponent } from './components/music/music.component';
     ApigalerieService,
     AppService,
     GameService
-
   ],
   bootstrap: [AppComponent]
 })
