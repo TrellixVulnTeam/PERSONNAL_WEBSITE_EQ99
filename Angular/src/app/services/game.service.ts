@@ -1,3 +1,5 @@
+// Service du jeu - gestion des joueurs et obstacles, loop de jeu, et communication avec le backend (en cours)
+
 import { Injectable, Input } from '@angular/core';
 
 import * as CONFIG from './../config/config';
@@ -7,13 +9,11 @@ import { PlayerPosition } from '../interfaces/player-position';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Player } from '../models/player-model';
-import { GameComponent } from '../components/game/game.component';
 
 const baseUrl = 'http://localhost:8080/game'
 
 @Injectable()
 export class GameService {
-
   nickname = "";
 	score = setInterval(() => {
 		this.score = this.score +1;
@@ -197,7 +197,6 @@ export class GameService {
       carBottom > componentTop
     ) {
       clearInterval(this.gameLoop);
-      this.create(this.nickname);
       alert('Game Over '+this.nickname+' your score is '+this.score);
       window.location.reload();
     }

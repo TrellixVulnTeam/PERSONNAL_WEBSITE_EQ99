@@ -1,3 +1,4 @@
+// API pour le composant galerie
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
@@ -12,6 +13,7 @@ export class ApigalerieService {
   page = 1;
   per_page = 15;
   getImage() {
+
     //appel API
     return this.httpClient.get(
       `https://api.unsplash.com/users/adispe/photos/?page=${this.page}&per_page=${this.per_page}&client_id=${this.Key}`

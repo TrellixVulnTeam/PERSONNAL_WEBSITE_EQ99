@@ -1,3 +1,5 @@
+// Service de l'application du jeu - commandes de jeu et initialisation du monde
+
 import { Injectable, EventEmitter } from '@angular/core';
 import { GameService } from './game.service';
 

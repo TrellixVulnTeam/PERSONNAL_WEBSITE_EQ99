@@ -18,7 +18,7 @@ export class ContactComponent implements OnInit {
       Comment: new FormControl('', [Validators.required])
     })
   }
-
+//Soumission du formulaire vers l'API de mailthis.to
   onSubmit(FormData) {
     console.log(FormData)
     this.contact.PostMessage(FormData)

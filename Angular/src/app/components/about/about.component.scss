@@ -1,9 +1,11 @@
+//titre de la section
 .titreabout {
   text-align: center;
   font-family: proxima-nova, monospace;
   color: white;
 }
 
+//Contenu de la section
 .descrabout {
   font-family: proxima-nova, monospace;
   color: white;
@@ -12,6 +14,7 @@
   margin: auto;
 }
 
+//div container
 .about {
   display: flex;
   flex-direction: column;

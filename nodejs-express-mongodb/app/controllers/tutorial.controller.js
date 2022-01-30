@@ -1,3 +1,4 @@
+// Communication avec la base de données (en cours)
 const db = require("../models");
 const Player = db.player;
 

@@ -1,3 +1,4 @@
+// Animations de transitions de pages
 import {
   trigger,
   transition,
@@ -9,6 +10,7 @@ import {
 } from '@angular/animations';
 
 export const routeTransitionAnimations = trigger('triggerName', [
+  // S'applique depuis toutes les pages vers toutes les pages
   transition('* => *', [
     style({ position: 'relative' }),
     query(':enter, :leave', [

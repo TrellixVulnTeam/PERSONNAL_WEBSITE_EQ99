@@ -1,3 +1,4 @@
+//Container de photo
 .container {
     display: flex;
     flex-direction: row;
@@ -7,6 +8,7 @@
     
 }
 
+//Style des photos
 .photo {
     margin: 10px;
     border: solid 2px;
@@ -14,6 +16,7 @@
     box-shadow: 2px 2px 5px black;
 }
 
+//effet de survol des photos
 .photo:hover {
     transform: scale(1.2);
     transition: 0.1s;

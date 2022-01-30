@@ -12,6 +12,7 @@ export class AnimationComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    //charge la configuration de l'effet
     particlesJS.load(
       'particles-js',
       'assets/data/particles.json',

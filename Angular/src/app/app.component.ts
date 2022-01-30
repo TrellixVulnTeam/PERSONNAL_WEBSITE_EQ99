@@ -11,6 +11,7 @@ import { routeTransitionAnimations } from './route-transition-animations';
 export class AppComponent {
   title = 'antonindisperatifr';
   prepareRoute(outlet: RouterOutlet): boolean {
+    // Animation de transition
 		return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animationState'];
 	}
   

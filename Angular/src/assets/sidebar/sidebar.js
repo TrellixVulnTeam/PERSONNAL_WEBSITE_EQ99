@@ -1,9 +1,11 @@
-/* Set the width of the side navigation to 250px */
+// Fonctions d'ouverture/fermeture de la sidebar
+
+//  Ouvre à 250px de large
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
   }
   
-  /* Set the width of the side navigation to 0 */
+  // largeur à 0 pour fermer
   function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
   } 

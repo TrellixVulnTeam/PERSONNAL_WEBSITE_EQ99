@@ -37,6 +37,8 @@ body {
     transform: translateY(0px);
   }
 }
+
+// Enchainement d'animation lettre par lettre
 .back span:nth-child(1) {
   animation-delay: 0s;
 }

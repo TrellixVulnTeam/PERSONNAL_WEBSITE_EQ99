@@ -27,8 +27,14 @@ export class GameComponent implements AfterViewInit {
 
 	public ngAfterViewInit() {
 		const canvasEl: HTMLCanvasElement = this.canvas.nativeElement;
+
+		//Ajout d'un joueur par nickname
 		this.gameService.addPlayer();
+
+		//Initialisation de l'affichage
 		this.appService.createPlayGround(canvasEl);
+
+		//Sequence de lancement du jeu
 		this.subscription = this.appService.getImageLoadEmitter()
 			.subscribe((item) => {
 				this.showLoader = false;
@@ -36,10 +42,11 @@ export class GameComponent implements AfterViewInit {
 			});
 	}
 
+	// Detection touche enfoncée
 	@HostListener('document:keydown', ['$event']) onKeydownHandler(event: KeyboardEvent) {
 		this.appService.movePlayer(event, 'keydown');
 	}
-
+	//Detection touche relevée
 	@HostListener('document:keyup', ['$event']) onKeyupHandler(event: KeyboardEvent) {
 		this.appService.movePlayer(event, 'keyup');
 	}
