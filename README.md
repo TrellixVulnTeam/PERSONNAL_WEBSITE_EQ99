@@ -1,7 +1,7 @@
 # PERSONNAL_WEBSITE
 Personnal Website / Portfolio
 
-This website is developped with Angular. You need node and npm installed.
+This website is developped with MEAN stack (MongoDB, ExpressJS, Agular and NodeJS. You need node and npm installed.
 Check npm version:
 ```
 npm --version
@@ -31,3 +31,14 @@ ng serve --open
 ```
 
 Default port is 4200.
+
+In the backend folder, run :
+
+```
+node server.js
+```
+
+Note: This readme is in progress. In any case of problem, please refer to this tutorial for details:
+https://www.bezkoder.com/mean-stack-crud-example-angular-13/
+
+
