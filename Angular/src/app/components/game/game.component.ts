@@ -18,7 +18,13 @@ export class GameComponent implements AfterViewInit {
 	@ViewChild('canvas') public canvas: ElementRef;
 	subscription: any;
 	showLoader = true;
-	score = this.gameService.score;
+
+	score = setInterval(() => {
+      this.score = this.gameService.score;
+      return this.score},
+      100
+      );
+	
 
 	constructor(
 		private appService: AppService,

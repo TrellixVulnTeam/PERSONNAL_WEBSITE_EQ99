@@ -14,12 +14,9 @@ const baseUrl = 'http://localhost:8080/game'
 
 @Injectable()
 export class GameService {
-  nickname = "";
-	score = setInterval(() => {
-		this.score = this.score +1;
-		return this.score},
-		200
-		);
+  nickname :any;
+	score =0;
+
   constructor(private http: HttpClient) { }
 
   @Input() public width: number = CONFIG.playGroundWidth;
@@ -58,6 +55,7 @@ export class GameService {
 
   startGameLoop() {
     this.gameLoop = setInterval(() => {
+      this.setScore();
       this.suffleProperties();
       this.cleanGround();
       this.createObstacles();
@@ -220,10 +218,21 @@ export class GameService {
   }
 
   create(data: any): Observable<any> {
+    console.log("data = "+data);
     return this.http.post(baseUrl, data);
   }
 
   addPlayer(): void {
     this.nickname = prompt("Choose your nickname");
+    this.create(this.nickname);
+  }
+
+  setScore(){
+    // this.score = setInterval(() => {
+    //   this.score = this.score +1;
+    //   return this.score},
+    //   200
+    //   );
+    this.score = this.score+1;
   }
 }
