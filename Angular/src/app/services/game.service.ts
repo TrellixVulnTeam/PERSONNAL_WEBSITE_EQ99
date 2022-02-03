@@ -10,12 +10,13 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Player } from '../models/player-model';
 
-const baseUrl = 'http://localhost:8080/game'
+const baseUrl = 'http://localhost:8080/'
 
 @Injectable()
 export class GameService {
   nickname :any;
 	score =0;
+  data = new Player;
 
   constructor(private http: HttpClient) { }
 
@@ -195,6 +196,9 @@ export class GameService {
       carBottom > componentTop
     ) {
       clearInterval(this.gameLoop);
+      this.data.nickname = this.nickname;
+      this.data.score = this.score;
+      this.create(this.data).subscribe();
       alert('Game Over '+this.nickname+' your score is '+this.score);
       window.location.reload();
     }
@@ -218,13 +222,12 @@ export class GameService {
   }
 
   create(data: any): Observable<any> {
-    console.log("data = "+data);
-    return this.http.post(baseUrl, data);
+    console.log(data);
+    return this.http.post<any>(baseUrl, data);
   }
 
   addPlayer(): void {
     this.nickname = prompt("Choose your nickname");
-    this.create(this.nickname);
   }
 
   setScore(){

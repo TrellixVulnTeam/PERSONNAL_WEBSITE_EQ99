@@ -15,6 +15,20 @@ const player = new Player({
     score: req.body.score,
   });
 
+  // Save Player in the database
+  player
+  .save(player)
+  .then(data => {
+    res.send(data);
+  })
+  .catch(err => {
+    res.status(500).send({
+      message:
+        err.message || "Some error occurred while creating the Player."
+    });
+  });
+}
+
 //Trouver joueur existant
   exports.findOne = (req, res) => {
     const nickname = req.params.nickname;
@@ -41,4 +55,4 @@ exports.update = (req, res) => {
       });
     };
 }
-}
+
