@@ -1,18 +1,8 @@
+const express = require('express');
+const router = express.Router();
 
-module.exports = app => {
-    const players = require("../controllers/tutorial.controller.js");
-  
-    var router = require("express").Router();
-  
-    // Create a new Tutorial
-    router.post("/", players.create);
+const playerCtrl = require ('../controllers/tutorial.controller');
 
-  
-    // Update a Tutorial with id
-    // router.put("/:id", tutorials.update);
+router.post('/api/player', playerCtrl.create)
 
-    // Create a new Tutorial
-    // router.delete("/", tutorials.deleteAll);
-  
-    // app.use("/api/players", router);
-  };
+module.exports = router;

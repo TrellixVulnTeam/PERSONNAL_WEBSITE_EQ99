@@ -223,7 +223,7 @@ export class GameService {
 
   create(data: any): Observable<any> {
     console.log(data);
-    return this.http.post<any>(baseUrl, data);
+    return this.http.post<any>(baseUrl+"api/player", data);
   }
 
   addPlayer(): void {

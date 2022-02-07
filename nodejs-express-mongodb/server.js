@@ -8,7 +8,17 @@ var corsOptions = {
   origin: "http://localhost:4200/",
 };
 
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
+
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content, Accept, Content-Type, Authorization');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
+  /*if (req.method === 'OPTIONS') {
+      res.status(200);
+  }*/
+  next();
+});
 
 // parse requests of content-type - application/json
 app.use(express.json());
@@ -34,6 +44,11 @@ db.mongoose
 app.get("/", (req, res) => {
   res.json({ message: "Coucou!" });
 });
+
+//Route player
+const playerRoutes = require('./app/routes/player.routes');
+
+app.use('/', playerRoutes);
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;
