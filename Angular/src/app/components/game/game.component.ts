@@ -7,6 +7,7 @@ import {
 } from '@angular/core';
 import { AppService } from '../../services/app.service';
 import { GameService } from '../../services/game.service';
+// import {ChangeDetectorRef} from '@angular/core';
 
 @Component({
 	selector: 'app-game',
@@ -15,9 +16,11 @@ import { GameService } from '../../services/game.service';
 })
 export class GameComponent implements AfterViewInit {
 
+
 	@ViewChild('canvas') public canvas: ElementRef;
 	subscription: any;
 	showLoader = true;
+	nickname= "";
 
 	score = setInterval(() => {
       this.score = this.gameService.score;
@@ -31,10 +34,12 @@ export class GameComponent implements AfterViewInit {
 		private gameService: GameService
 	) {}
 
+
 	public ngAfterViewInit() {
+
+
 		const canvasEl: HTMLCanvasElement = this.canvas.nativeElement;
 
-		//Ajout d'un joueur par nickname
 		this.gameService.addPlayer();
 
 		//Initialisation de l'affichage
@@ -56,5 +61,5 @@ export class GameComponent implements AfterViewInit {
 	@HostListener('document:keyup', ['$event']) onKeyupHandler(event: KeyboardEvent) {
 		this.appService.movePlayer(event, 'keyup');
 	}
-
 }
+

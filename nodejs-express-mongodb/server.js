@@ -47,7 +47,6 @@ app.get("/", (req, res) => {
 
 //Route player
 const playerRoutes = require('./app/routes/player.routes');
-
 app.use('/', playerRoutes);
 
 // set port, listen for requests

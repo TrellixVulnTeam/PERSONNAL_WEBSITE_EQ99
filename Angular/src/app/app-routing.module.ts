@@ -7,6 +7,7 @@ import { GalerieComponent } from './components/galerie/galerie.component';
 import { AboutComponent } from './components/about/about.component';
 import { GameComponent } from './components/game/game.component';
 import { MusicComponent } from './components/music/music.component';
+import { GameMenuComponent } from './components/game-menu/game-menu.component';
 
 //Routing / Navigation
 const routes: Routes = [
@@ -41,6 +42,11 @@ const routes: Routes = [
         path: 'game',
         component: GameComponent,
         data: { animationState: 'Game' },
+      },
+      {
+        path: 'gamemenu',
+        component: GameMenuComponent,
+        data: { animationState: 'GameMenu' },
       },
       {
         path: 'music',

@@ -17,6 +17,7 @@ export class GameService {
   nickname :any;
 	score =0;
   data = new Player;
+  condition: boolean;
 
   constructor(private http: HttpClient) { }
 
@@ -199,8 +200,7 @@ export class GameService {
       this.data.nickname = this.nickname;
       this.data.score = this.score;
       this.create(this.data).subscribe();
-      alert('Game Over '+this.nickname+' your score is '+this.score);
-      window.location.reload();
+      this.playAgain();
     }
   }
 
@@ -213,8 +213,19 @@ export class GameService {
     );
   }
 
+  playAgain(){
+   let confirmation = confirm('Game Over '+this.nickname+' your score is '+this.score+". Play again?");
+   if(confirmation){
+     this.condition=true;
+    //  window.location.reload()
+    }
+   else{
+     this.condition = false;
+     window.location.href="https://antonindisperati.fr/#/gamemenu"}
+  }
+
   getAll(): Observable<Player[]> {
-    return this.http.get<Player[]>(baseUrl);
+    return this.http.get<Player[]>(baseUrl+"api/player");
   }
 
   get(id: any): Observable<any> {
@@ -228,6 +239,8 @@ export class GameService {
 
   addPlayer(): void {
     this.nickname = prompt("Choose your nickname");
+    //Doit checker dans la db. Si existe, confirmer.
+    this.condition=true;
   }
 
   setScore(){

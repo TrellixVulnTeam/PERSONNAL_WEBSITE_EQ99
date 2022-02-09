@@ -33,6 +33,7 @@ import { GameComponent } from './components/game/game.component';
 import { AppService } from './services/app.service';
 import { GameService } from './services/game.service';
 import { MusicComponent } from './components/music/music.component';
+import { GameMenuComponent } from './components/game-menu/game-menu.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { MusicComponent } from './components/music/music.component';
     GalerieComponent,
     AboutComponent,
     GameComponent,
-    MusicComponent
+    MusicComponent,
+    GameMenuComponent,
   ],
   imports: [
     BrowserModule,

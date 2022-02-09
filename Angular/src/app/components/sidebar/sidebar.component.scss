@@ -6,7 +6,7 @@
   z-index: 1;
   top: 0;
   right: 0;
-  background-color: #383b40;
+  background-color: #1a252d;
   overflow-x: hidden;
   padding-top: 60px;
   transition: 0.5s;
@@ -78,10 +78,10 @@
 $thick: 3px;
 $pad: 0.7em;
 $extra: calc(#{$pad} * 1.2);
-$color: orange;
+$color: skyblue;
 
 .portfolio-experiment {
-  background: #383b40;
+  background: #1a252d;
 
   a {
     color: white;

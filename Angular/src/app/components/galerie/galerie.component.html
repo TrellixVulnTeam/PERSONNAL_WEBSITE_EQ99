@@ -2,6 +2,7 @@
 <!-- affiche les images de mon compte unsplash -->
 <div class="container" *ngIf="Items">
   <div class="photo" *ngFor="let item of Items">
-    <img src="{{ item.urls.small }}" alt="broken" />
+    <img class="img" src="{{ item.urls.small }}" alt="broken" />
+    <div class="effect"></div>
   </div>
 </div>

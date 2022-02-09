@@ -1,23 +1,78 @@
 //Container de photo
 .container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 50px;
-    
+  max-width: 600px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 50px;
 }
 
 //Style des photos
 .photo {
-    margin: 10px;
-    border: solid 2px;
-    border-color: black;
-    box-shadow: 2px 2px 5px black;
+  margin: 10px;
+  border: solid 2px;
+  border-color: black;
+  box-shadow: 2px 2px 5px black;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-//effet de survol des photos
-.photo:hover {
-    transform: scale(1.2);
-    transition: 0.1s;
+.effect {
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  border: solid 3px skyblue;
+  clip-path: polygon(
+    0% 0%,
+    10% 0,
+    10% 10%,
+    90% 10%,
+    90% 0,
+    100% 0,
+    100% 10%,
+    10% 10%,
+    90% 90%,
+    100% 90%,
+    100% 100%,
+    90% 100%,
+    90% 90%,
+    10% 90%,
+    10% 100%,
+    0 100%,
+    0 90%,
+    90% 90%,
+    10% 10%,
+    0 10%
+  );
 }
+
+.img:hover + .effect {
+  transform: scale(1.2);
+  transition: 0.1s;
+}
+
+// .divphoto {
+//     margin-right: auto;
+//     margin-left: auto;
+//     text-align: center;
+//     position: relative;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//   }
+
+// .divphoto-corner-border {
+//     width: 80%;
+//     height: 80%;
+//     position: absolute;
+//     border: solid 3px skyblue;
+//     clip-path: polygon(0% 0%, 10% 0, 10% 10%, 90% 90%, 100% 90%, 100% 100%, 90% 100%, 90% 90%, 10% 10%, 0 10%);
+//   }
+
+//   .photo:hover + .effect{
+//     transform: scale(1.2);
+//       transition: 0.1s;
+//   }
