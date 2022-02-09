@@ -9,12 +9,18 @@ body {
   align-items: center;
   height: 90%;
 }
+
+@font-face {
+  font-family: "ailerons";
+  src: url("../../../../font/Ailerons/Ailerons-Regular.otf");
+}
+
 .back {
   margin: 1em auto;
-  font-family: "Roboto";
+  font-family: "ailerons";
 }
 .back span {
-  font-size: 3em;
+  font-size: 7em;
   color: skyblue;
   background: #131a21 ;
   display: table-cell;

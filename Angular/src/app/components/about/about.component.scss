@@ -1,7 +1,12 @@
 //titre de la section
+@font-face {
+  font-family: "ailerons";
+  src: url("../../../../font/Ailerons/Ailerons-Regular.otf");
+}
+
 .titreabout {
   text-align: center;
-  font-family: proxima-nova, monospace;
+  font-family: ailerons;
   color: white;
 }
 

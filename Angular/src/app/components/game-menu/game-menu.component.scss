@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "ailerons";
+  src: url("../../../../font/Ailerons/Ailerons-Regular.otf");
+}
+
 //ANIMATION BOUTON
 
 .menu-bouton {
@@ -46,7 +51,8 @@
       letter-spacing: 0.07em;
   
       .text {
-        font-family: proxima-nova, monospace;
+        font-family: ailerons;
+        font-size: 25pt;
         transform: translate3d(0, $pad, 0);
         display: block;
         transition: transform 0.4s cubic-bezier(0.2, 0, 0, 1) 0.4s;
