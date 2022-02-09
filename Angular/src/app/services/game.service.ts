@@ -10,16 +10,15 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Player } from '../models/player-model';
 
-const baseUrl = 'http://localhost:8080/'
+const baseUrl = 'http://localhost:8080/';
 
 @Injectable()
 export class GameService {
-  nickname :any;
-	score =0;
-  data = new Player;
-  condition: boolean;
+  nickname: string;
+  score = 0;
+  data = new Player();
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   @Input() public width: number = CONFIG.playGroundWidth;
   @Input() public height: number = CONFIG.playGroundHeight;
@@ -213,19 +212,13 @@ export class GameService {
     );
   }
 
-  playAgain(){
-   let confirmation = confirm('Game Over '+this.nickname+' your score is '+this.score+". Play again?");
-   if(confirmation){
-     this.condition=true;
-    //  window.location.reload()
-    }
-   else{
-     this.condition = false;
-     window.location.href="https://antonindisperati.fr/#/gamemenu"}
+  playAgain() {
+    confirm('Game Over ' + this.nickname + ' your score is ' + this.score);
+    window.location.href = 'https://antonindisperati.fr/#/gamemenu';
   }
 
   getAll(): Observable<Player[]> {
-    return this.http.get<Player[]>(baseUrl+"api/player");
+    return this.http.get<Player[]>(baseUrl + 'api/player');
   }
 
   get(id: any): Observable<any> {
@@ -234,21 +227,15 @@ export class GameService {
 
   create(data: any): Observable<any> {
     console.log(data);
-    return this.http.post<any>(baseUrl+"api/player", data);
+    return this.http.post<any>(baseUrl + 'api/player', data);
   }
 
-  addPlayer(): void {
-    this.nickname = prompt("Choose your nickname");
-    //Doit checker dans la db. Si existe, confirmer.
-    this.condition=true;
-  }
-
-  setScore(){
+  setScore() {
     // this.score = setInterval(() => {
     //   this.score = this.score +1;
     //   return this.score},
     //   200
     //   );
-    this.score = this.score+1;
+    this.score = this.score + 1;
   }
 }

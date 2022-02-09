@@ -40,8 +40,6 @@ export class GameComponent implements AfterViewInit {
 
 		const canvasEl: HTMLCanvasElement = this.canvas.nativeElement;
 
-		this.gameService.addPlayer();
-
 		//Initialisation de l'affichage
 		this.appService.createPlayGround(canvasEl);
 

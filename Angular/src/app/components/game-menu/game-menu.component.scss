@@ -32,10 +32,11 @@
   $color: skyblue;
   
   .portfolio-experiment {
-    background: #2F3940;
-  
-    a {
+    
+
+    button {
       color: white;
+      background-color: transparent;
       padding: $pad $extra;
       display: inline-block;
       border: $thick solid transparent;
@@ -111,9 +112,9 @@
         transform-origin: right;
       }
     }
-  
-    a:hover,
-    a:active {
+
+    button:hover,
+    button:active {
       .text {
         transform: translate3d(0, 0, 0);
         transition: transform 0.6s cubic-bezier(0.2, 0, 0, 1) 0.4s;
@@ -154,7 +155,7 @@
     }
   }
 
-  .form-example{
+  .form{
       display: flex;
       flex-direction: column;
       text-align: center;

@@ -34,6 +34,7 @@ import { AppService } from './services/app.service';
 import { GameService } from './services/game.service';
 import { MusicComponent } from './components/music/music.component';
 import { GameMenuComponent } from './components/game-menu/game-menu.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -66,7 +67,8 @@ import { GameMenuComponent } from './components/game-menu/game-menu.component';
     ReactiveFormsModule,
     HttpClientModule,
     LazyLoadImageModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [
     ContactService,
